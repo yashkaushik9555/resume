@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Yash Kaushik - Resume</title>
     <style>
         body {
-            font-family: "Arial", sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
             color: #333;
             margin: 0;
             padding: 0;
@@ -19,11 +18,11 @@
         }
 
         header {
-            background: #2c3e50;
+            background: #1e3a8a;
             color: white;
-            padding: 20px;
+            padding: 40px;
             text-align: center;
-            border-bottom: 2px solid #2980b9;
+            border-bottom: 4px solid #3b82f6;
         }
 
         .profile-photo {
@@ -31,61 +30,21 @@
             width: 150px;
             height: 150px;
             object-fit: cover;
-            margin-top: 10px;
+            margin: 20px auto;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
 
-        section {
-            padding: 20px;
-            margin: 20px 0;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-
-        section h2 {
-            border-bottom: 2px solid #2980b9;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            color: #2980b9;
-        }
-
-        section p,
-        section ul {
-            margin: 10px 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        section ul li {
-            margin: 10px 0;
-        }
-
-        .fa {
-            margin-right: 10px;
-        }
-
-        .footer-links a {
-            margin: 0 10px;
-            color: #2980b9;
-            text-decoration: none;
-            font-size: 1.2em;
-        }
-
-        .footer-links a:hover {
-            color: #e74c3c;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #2c3e50;
-            color: white;
-            border-top: 2px solid #2980b9;
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
         }
 
         .typing-line {
-            font-weight: bold;
             font-size: 1.2em;
+            font-weight: bold;
+            border-right: 4px solid #ff9800;
+            white-space: nowrap;
+            overflow: hidden;
             animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
         }
 
@@ -93,62 +52,103 @@
             from {
                 width: 0;
             }
-
             to {
                 width: 100%;
             }
         }
 
         @keyframes blink-caret {
-
-            from,
-            to {
+            from, to {
                 border-color: transparent;
             }
-
             50% {
-                border-color: orange;
+                border-color: #ff9800;
             }
         }
 
-        @media (min-width: 768px) {
-
-            header,
-            section {
-                width: 60%;
-                margin: auto;
-            }
+        section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 900px;
+            transition: background 0.3s;
         }
 
-        .animate__animated.animate__fadeIn {
-            animation-duration: 2s;
+        section:hover {
+            background: #f0f4f8;
+        }
+
+        h2 {
+            color: #1e40af;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        a {
+            color: #1e40af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #ff9800;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: #fff;
+            font-size: 1.6em;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ff9800;
+        }
+
+        footer {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-top: 4px solid #3b82f6;
+        }
+
+        @media (max-width: 768px) {
+            .footer-links a {
+                font-size: 1.4em;
+            }
         }
     </style>
 </head>
 
 <body>
     <header class="animate__animated animate__fadeIn">
-        <img src="photo.png" alt="Profile Photo" class="profile-photo animate__animated animate__bounceIn" />
+        <img src="photo.png" alt="Profile Photo" class="profile-photo animate__animated animate__zoomIn" />
         <h1 class="animate__animated animate__fadeInDown">Yash Kaushik</h1>
-        <p id="typing-line" class="animate__animated animate__fadeInUp">
-            Aspiring a challenging entry-level position in a progressive
-            organization where I can utilize my skills in Java, C++, and database
-            management while contributing to the growth of the company.
+        <p id="typing-line" class="typing-line">
+            Aspiring a challenging entry-level position in a progressive organization where I can utilize my skills in Java, C++, and database management while contributing to the growth of the company.
         </p>
     </header>
 
     <section id="contact" class="animate__animated animate__fadeInUp">
-        <h2>
-            <i class="fa fa-address-book" aria-hidden="true"></i> Contact
-            Information
-        </h2>
+        <h2><i class="fa fa-address-book" aria-hidden="true"></i> Contact Information</h2>
         <ul>
             <li><strong>Phone:</strong> 8818061836</li>
             <li><strong>E-mail:</strong> yashkaushik955@gmail.com</li>
-            <li>
-                <strong>Address:</strong> House no.20 A, Mahavir colony Gali no.2,
-                Near 7 star shine point, Ballabgarh, Haryana 121004
-            </li>
+            <li><strong>Address:</strong> House no.20 A, Mahavir colony Gali no.2, Near 7 star shine point, Ballabgarh, Haryana 121004</li>
         </ul>
     </section>
 
@@ -156,12 +156,8 @@
         <h2><i class="fa fa-graduation-cap" aria-hidden="true"></i> Education</h2>
         <ul>
             <li><strong>2024</strong> - M.V.N University - 7.8 SGPA</li>
-            <li>
-                <strong>2020</strong> - J.C.B Modern Vidya Mandir Sr. Sec School - 78%
-            </li>
-            <li>
-                <strong>2018</strong> - Modern Vidya Mandir Public School - 86.6%
-            </li>
+            <li><strong>2020</strong> - J.C.B Modern Vidya Mandir Sr. Sec School - 78%</li>
+            <li><strong>2018</strong> - Modern Vidya Mandir Public School - 86.6%</li>
         </ul>
     </section>
 
@@ -169,12 +165,9 @@
         <h2><i class="fa fa-cogs" aria-hidden="true"></i> Skills</h2>
         <ul>
             <li><strong>Programming Languages:</strong> Java, C, C++, Python</li>
-            <li>
-                <strong>Tools:</strong> Spring Tool Suite, VS Code, Bootstrap Studio,
-                GitHub, Git
-            </li>
+            <li><strong>Tools:</strong> Spring Tool Suite, VS Code, Bootstrap Studio, GitHub, Git</li>
             <li><strong>Databases:</strong> MongoDB, MySQL</li>
-            <li><strong>Web Development:</strong> HTML, CSS & JavaScript</li>
+            <li><strong>Web Development:</strong> HTML, CSS, JavaScript</li>
         </ul>
     </section>
 
@@ -182,55 +175,29 @@
         <h2><i class="fa fa-briefcase" aria-hidden="true"></i> Experience</h2>
         <ul>
             <li>
-                <strong>Java Developer Intern</strong> at Rarr Technologies Pvt. Ltd,
-                Faridabad (2024 - Present)
+                <strong>Java Developer Intern</strong> at Rarr Technologies Pvt. Ltd, Faridabad (2024 - Present)
                 <ul>
-                    <li>
-                        Developing and maintaining web applications using Java, Spring
-                        Boot, and Hibernate.
-                    </li>
-                    <li>
-                        Collaborating with team members to design and implement new
-                        features.
-                    </li>
-                    <li>
-                        Performing code reviews and ensuring adherence to best practices.
-                    </li>
+                    <li>Developing and maintaining web applications using Java, Spring Boot, and Hibernate.</li>
+                    <li>Collaborating with team members to design and implement new features.</li>
+                    <li>Performing code reviews and ensuring adherence to best practices.</li>
                     <li>Writing unit tests to ensure code quality and reliability.</li>
-                    <li>
-                        Actively contributing as a Java Intern at RARR Technology,
-                        specializing in Spectra and ERP.
-                    </li>
-                    <li>
-                        Collaborating with team members to develop and maintain software
-                        solutions, gaining hands-on experience in live project
-                        environments.
-                    </li>
+                    <li>Actively contributing to software solutions for Spectra and ERP.</li>
                 </ul>
             </li>
         </ul>
     </section>
 
     <section id="projects" class="animate__animated animate__fadeInUp">
-        <h2><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Projects</h2>
+        <h2><i class="fa fa-lightbulb" aria-hidden="true"></i> Projects</h2>
         <ul>
             <li>
-                <strong>E-Commerce Website:</strong> Developed an E-Commerce Website
-                for a college project. Utilized Bootstrap Studio for front-end design
-                and Spring Tool Suite for API development. Implemented MySQL for
-                efficient database management.
-                <a href="project/Explore-the-Evolution-and-Impact-of-E-commerce-Websites-Unveiling-Trends-Challenges-and-Future-Prosp.pdf"
-                    target="_blank">View Project Presentation</a>
-                |
+                <strong>E-Commerce Website:</strong> Developed an E-Commerce Website for a college project. Utilized Bootstrap Studio for front-end design and Spring Tool Suite for API development. Implemented MySQL for efficient database management.
+                <a href="project/Explore-the-Evolution-and-Impact-of-E-commerce-Websites-Unveiling-Trends-Challenges-and-Future-Prosp.pdf" target="_blank">View Project Presentation</a> |
                 <a href="project/Ecommerce_project_Report[1].pdf" target="_blank">View Project Report</a>
             </li>
             <li>
-                <strong>Image Classification (CNN):</strong> Developed a convolutional
-                network (CNN) to classify images as Car or Aeroplane. Utilized
-                transfer learning and fine-tuning with a pre-trained VGG model to
-                achieve an accuracy of 92% on the test set.
-                <a href="project/Image Classification.pdf" target="_blank">View Project Presentation</a>
-                |
+                <strong>Image Classification (CNN):</strong> Developed a convolutional network (CNN) to classify images as Car or Aeroplane. Utilized transfer learning and fine-tuning with a pre-trained VGG model to achieve an accuracy of 92% on the test set.
+                <a href="project/Image Classification.pdf" target="_blank">View Project Presentation</a> |
                 <a href="path/to/project-report.pdf" target="_blank">View Project Report</a>
             </li>
         </ul>
@@ -239,76 +206,36 @@
     <section id="certificates" class="animate__animated animate__fadeInUp">
         <h2><i class="fa fa-certificate" aria-hidden="true"></i> Certificates</h2>
         <ul>
-            <li>
-                Qualified <strong>TCS NQT-IT</strong> Dec 2023 with 64%.
-                <a href="https://drive.google.com/file/d/1WSgfqJBtJX4SHbsFIUrPRz98QOJrZS7_/view?usp=sharing">Score
-                    Card</a>
-            </li>
-            <li>
-                <strong>Java Basic Certificate:</strong>
-                <a href="https://www.hackerrank.com/certificates/4b9cb44d092b">Hacker Rank</a>
-            </li>
-            <li>
-                <strong>SQL Basic Certificate:</strong>
-                <a href="https://www.hackerrank.com/certificates/029fd20af544">Hacker Rank</a>
-            </li>
+            <li>Qualified <strong>TCS NQT-IT</strong> Dec 2023 with 64%. <a href="https://drive.google.com/file/d/1WSgfqJBtJX4SHbsFIUrPRz98QOJrZS7_/view?usp=sharing">Score Card</a></li>
+            <li><strong>Java Basic Certificate:</strong> <a href="https://www.hackerrank.com/certificates/4b9cb44d092b">HackerRank</a></li>
+            <li><strong>SQL Basic Certificate:</strong> <a href="https://www.hackerrank.com/certificates/029fd20af544">HackerRank</a></li>
         </ul>
     </section>
 
     <section id="achievements" class="animate__animated animate__fadeInUp">
         <h2><i class="fa fa-trophy" aria-hidden="true"></i> Achievements</h2>
         <ul>
-            <li>
-                <strong>Star Performer of the Month (July 2024)</strong> at Rarr
-                Technologies Pvt. Ltd, Faridabad
-            </li>
+            <li><strong>Star Performer of the Month (July 2024)</strong> at Rarr Technologies Pvt. Ltd, Faridabad</li>
         </ul>
     </section>
 
     <section id="interests" class="animate__animated animate__fadeInUp">
         <h2><i class="fa fa-heart" aria-hidden="true"></i> Interests</h2>
         <ul>
-            <li>
-                <strong>Music:</strong> Enjoys listening to music for relaxation and
-                inspiration.
-            </li>
-            <li>
-                <strong>Sports:</strong> Participating in or following sports
-                activities like cricket, basketball, or tennis.
-            </li>
-            <li>
-                <strong>Yoga/Meditation:</strong> Practicing mindfulness and promoting
-                relaxation.
-            </li>
+            <li><strong>Music:</strong> Enjoys listening to music for relaxation and inspiration.</li>
+            <li><strong>Sports:</strong> Participating in or following sports activities like cricket, basketball, or tennis.</li>
+            <li><strong>Yoga/Meditation:</strong> Practicing mindfulness and promoting relaxation.</li>
         </ul>
     </section>
 
     <section id="qualities" class="animate__animated animate__fadeInUp">
         <h2><i class="fa fa-star" aria-hidden="true"></i> Qualities</h2>
         <ul>
-            <li>
-                <strong>Emotional Intelligence:</strong> Shows an understanding of
-                emotions, both in oneself and others, and utilizes this awareness to
-                handle interactions with empathy and tact.
-            </li>
-            <li>
-                <strong>Collaboration:</strong> Works effectively with others, valuing
-                teamwork and fostering a positive and cooperative environment.
-            </li>
-            <li>
-                <strong>Flexibility:</strong> Demonstrates flexibility in adapting to
-                changing circumstances and adjusting strategies as needed.
-            </li>
-            <li>
-                <strong>Problem-Solving:</strong> Analyzes challenges, identifies
-                solutions, and approaches issues with a logical and creative mindset
-                to overcome obstacles effectively.
-            </li>
-            <li>
-                <strong>Adaptability:</strong> Easily adapts to new situations,
-                changes, and challenges, embracing them as opportunities for growth
-                and learning.
-            </li>
+            <li><strong>Emotional Intelligence:</strong> Shows an understanding of emotions, both in oneself and others, and utilizes this awareness to handle interactions with empathy and tact.</li>
+            <li><strong>Collaboration:</strong> Works effectively with others, valuing teamwork and fostering a positive and cooperative environment.</li>
+            <li><strong>Flexibility:</strong> Demonstrates flexibility in adapting to changing circumstances and adjusting strategies as needed.</li>
+            <li><strong>Problem-Solving:</strong> Analyzes challenges, identifies solutions, and approaches issues with a logical and creative mindset to overcome obstacles effectively.</li>
+            <li><strong>Adaptability:</strong> Easily adapts to new situations, changes, and challenges, embracing them as opportunities for growth and learning.</li>
         </ul>
     </section>
 
@@ -327,37 +254,13 @@
 
     <footer class="animate__animated animate__fadeInUp">
         <div class="footer-links">
-            <a href="https://github.com/Yashkaus"><i class="fa fa-github" style="font-size: 40px"
-                    aria-hidden="true"></i></a>
-            <a href="https://www.instagram.com/yashkaushik955/"><i class="fa fa-instagram" style="font-size: 40px"
-                    aria-hidden="true"></i></a>
-            <a href="https://www.linkedin.com/in/yash-kaushik-a0b57b230"><i class="fa fa-linkedin"
-                    style="font-size: 40px" aria-hidden="true"></i></a>
-            <a href="https://www.facebook.com/yash.kaushik.77770"><i class="fa fa-facebook-official"
-                    style="font-size: 40px" aria-hidden="true"></i></a>
+            <a href="https://github.com/Yashkaus" aria-label="GitHub Profile"><i class="fa fa-github" aria-hidden="true"></i></a>
+            <a href="https://www.instagram.com/yashkaushik955/" aria-label="Instagram Profile"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/in/yash-kaushik-a0b57b230" aria-label="LinkedIn Profile"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            <a href="https://www.facebook.com/yash.kaushik.77770" aria-label="Facebook Profile"><i class="fa fa-facebook-official" aria-hidden="true"></i></a>
         </div>
-        <p>&copy; 2023 Yash Kaushik</p>
+        <p>&copy; 2024 Yash Kaushik</p>
     </footer>
-
-    <script>
-        const typingLine = document.getElementById("typing-line");
-        const text =
-            "Aspiring a challenging entry-level position in a progressive organization where I can utilize my skills in Java, C++, and database management while contributing to the growth of the company.";
-        let index = 0;
-
-        function type() {
-            typingLine.textContent = text.slice(0, index);
-            index++;
-
-            if (index > text.length) {
-                index = 0;
-            }
-
-            setTimeout(type, 50);
-        }
-
-        type();
-    </script>
 </body>
 
 </html>
