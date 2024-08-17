@@ -4,14 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="style.css" />
     <title>Yash Kaushik - Resume</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Arial', sans-serif;
             color: #333;
             margin: 0;
             padding: 0;
@@ -19,11 +18,11 @@
         }
 
         header {
-            background: #2c3e50;
+            background: #1e3a8a;
             color: white;
-            padding: 20px;
+            padding: 40px;
             text-align: center;
-            border-bottom: 2px solid #2980b9;
+            border-bottom: 4px solid #3b82f6;
         }
 
         .profile-photo {
@@ -31,65 +30,21 @@
             width: 150px;
             height: 150px;
             object-fit: cover;
-            margin-top: 10px;
-        }
-
-        section {
-            padding: 20px;
             margin: 20px auto;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 900px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
         }
 
-        section h2 {
-            border-bottom: 2px solid #2980b9;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            color: #2980b9;
-        }
-
-        section p, section ul {
-            margin: 10px 0;
-            padding: 0;
-            list-style: none;
-        }
-
-        section ul li {
-            margin: 10px 0;
-        }
-
-        .fa {
-            margin-right: 10px;
-        }
-
-        .footer-links a {
-            margin: 0 10px;
-            color: #2980b9;
-            text-decoration: none;
-            font-size: 1.5em;
-            transition: color 0.3s;
-        }
-
-        .footer-links a:hover {
-            color: #e74c3c;
-        }
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background: #2c3e50;
-            color: white;
-            border-top: 2px solid #2980b9;
+        h1 {
+            font-size: 2.5em;
+            margin: 0;
         }
 
         .typing-line {
-            font-weight: bold;
             font-size: 1.2em;
+            font-weight: bold;
+            border-right: 4px solid #ff9800;
             white-space: nowrap;
             overflow: hidden;
-            border-right: 3px solid orange;
             animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
         }
 
@@ -107,19 +62,73 @@
                 border-color: transparent;
             }
             50% {
-                border-color: orange;
+                border-color: #ff9800;
             }
         }
 
-        @media (min-width: 768px) {
-            header, section {
-                width: 80%;
-            }
+        section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 900px;
+            transition: background 0.3s;
+        }
+
+        section:hover {
+            background: #f0f4f8;
+        }
+
+        h2 {
+            color: #1e40af;
+            border-bottom: 3px solid #3b82f6;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+        }
+
+        ul {
+            padding: 0;
+            list-style: none;
+        }
+
+        ul li {
+            margin: 10px 0;
+        }
+
+        a {
+            color: #1e40af;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        a:hover {
+            color: #ff9800;
+        }
+
+        .footer-links a {
+            margin: 0 10px;
+            color: #fff;
+            font-size: 1.6em;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: #ff9800;
+        }
+
+        footer {
+            background: #1e3a8a;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-top: 4px solid #3b82f6;
         }
 
         @media (max-width: 768px) {
             .footer-links a {
-                font-size: 1.2em;
+                font-size: 1.4em;
             }
         }
     </style>
@@ -127,7 +136,7 @@
 
 <body>
     <header class="animate__animated animate__fadeIn">
-        <img src="photo.png" alt="Profile Photo" class="profile-photo animate__animated animate__bounceIn" />
+        <img src="photo.png" alt="Profile Photo" class="profile-photo animate__animated animate__zoomIn" />
         <h1 class="animate__animated animate__fadeInDown">Yash Kaushik</h1>
         <p id="typing-line" class="typing-line">
             Aspiring a challenging entry-level position in a progressive organization where I can utilize my skills in Java, C++, and database management while contributing to the growth of the company.
@@ -179,7 +188,7 @@
     </section>
 
     <section id="projects" class="animate__animated animate__fadeInUp">
-        <h2><i class="fa fa-lightbulb-o" aria-hidden="true"></i> Projects</h2>
+        <h2><i class="fa fa-lightbulb" aria-hidden="true"></i> Projects</h2>
         <ul>
             <li>
                 <strong>E-Commerce Website:</strong> Developed an E-Commerce Website for a college project. Utilized Bootstrap Studio for front-end design and Spring Tool Suite for API development. Implemented MySQL for efficient database management.
@@ -198,8 +207,8 @@
         <h2><i class="fa fa-certificate" aria-hidden="true"></i> Certificates</h2>
         <ul>
             <li>Qualified <strong>TCS NQT-IT</strong> Dec 2023 with 64%. <a href="https://drive.google.com/file/d/1WSgfqJBtJX4SHbsFIUrPRz98QOJrZS7_/view?usp=sharing">Score Card</a></li>
-            <li><strong>Java Basic Certificate:</strong> <a href="https://www.hackerrank.com/certificates/4b9cb44d092b">Hacker Rank</a></li>
-            <li><strong>SQL Basic Certificate:</strong> <a href="https://www.hackerrank.com/certificates/029fd20af544">Hacker Rank</a></li>
+            <li><strong>Java Basic Certificate:</strong> <a href="https://www.hackerrank.com/certificates/4b9cb44d092b">HackerRank</a></li>
+            <li><strong>SQL Basic Certificate:</strong> <a href="https://www.hackerrank.com/certificates/029fd20af544">HackerRank</a></li>
         </ul>
     </section>
 
@@ -252,20 +261,6 @@
         </div>
         <p>&copy; 2024 Yash Kaushik</p>
     </footer>
-
-    <script>
-        const typingLine = document.getElementById("typing-line");
-        const text = "Aspiring a challenging entry-level position in a progressive organization where I can utilize my skills in Java, C++, and database management while contributing to the growth of the company.";
-        let index = 0;
-
-        function type() {
-            typingLine.textContent = text.slice(0, index);
-            index = (index + 1) % (text.length + 1);
-            requestAnimationFrame(() => setTimeout(type, 50));
-        }
-
-        type();
-    </script>
 </body>
 
 </html>
